@@ -1,0 +1,129 @@
+.signup {
+    display: flex; // Add display flex to the parent container
+    justify-content: center; // Center horizontally
+    align-items: center; // Center vertically
+    width: 100%;
+    height: 100vh; // Full viewport height
+    min-height: 50vh; // Minimum height of 50vh
+  }
+  
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; // Default direction for larger screens
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1400px; // Set a max width for the signup form
+    margin: auto;
+  
+    // Media query for smaller screens
+    @media screen and (min-width:1200px ){
+      max-width: 80%;
+    }
+    @media screen and (max-width: 1200px) { 
+      flex-direction: column;
+      max-width: 80%; // Switch to column on smaller screens
+    }
+  }
+  
+  .signup-container-media {
+    text-align: center;
+    margin-bottom: 2rem;
+    max-height: 80%;
+  
+    .signup-container-image {
+      width: 100%;
+      height: 100%; // Limit image size
+      border-radius: 10px;
+    }
+  
+    h6 {
+      font-size: 1.2rem;
+      color: #333; // Darker text for visibility
+    }
+  }
+  
+  .signup-container-section {
+    width: 100%;
+  
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #2c3e50; // Darker primary color
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+      color: #34495e; // Slightly lighter color for the subtitle
+      margin-bottom: 1.5rem;
+    }
+  
+    .form-group {
+      margin-bottom: 1.5rem;
+  
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: #2c3e50; // Consistent label color
+      }
+  
+      input,
+      .MuiSelect-root { // Include MUI Select for styling
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: border 0.3s;
+  
+        &:focus {
+          border-color: #2980b9; // Change border color on focus
+          outline: none;
+        }
+      }
+    }
+  
+    .signup-prompt {
+      margin-top: 20px;
+      font-size: 0.9rem;
+  
+      p {
+        color: #666;
+  
+        span {
+          color: #007bff;
+          cursor: pointer;
+          font-weight: bold;
+          text-decoration: underline;
+          &:hover {
+            color: #0056b3;
+          }
+        }
+      }
+    }
+  
+    .error-message {
+      color: #e74c3c; // Red color for error messages
+      margin-bottom: 1rem;
+    }
+  
+    .signup-button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #2980b9; // Primary button color
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+  
+      &:hover {
+        background-color: #3498db; // Lighter blue on hover
+      }
+    }
+  }

@@ -1,0 +1,146 @@
+// Login.scss
+.login{
+    display: flex; // Add display flex to the parent container
+    justify-content: center; // Center horizontally
+    align-items: center; // Center vertically
+    width: 100%;
+    height: 100vh; // Full viewport height
+    min-height: 50vh;
+  }
+  
+  .login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; // Default direction for larger screens
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1400px;
+    // max-height: 80vh; // Set a max width for the signup form
+    margin: auto;
+  
+    // Media query for smaller screens
+    @media screen and (min-width:1200px ){
+      max-width: 80%;
+    }
+    @media screen and (max-width: 1200px) { 
+      flex-direction: column;
+      max-width: 80%; // Switch to column on smaller screens
+    }
+  }
+  
+  .login-container-media{
+    text-align: center;
+    margin-bottom: 2rem;
+    max-height: 80%;
+  
+    .signup-container-image {
+      width: 100%;
+      height: 100%; // Limit image size
+      border-radius: 10px;
+  
+      // @media screen and (max-width:1200px){
+      //   height: 50%;
+      // }
+    }
+  
+    h6 {
+      font-size: 1.2rem;
+      color: #333; // Darker text for visibility
+    }
+  }
+  
+  .login-container-section {
+    width: 100%;
+    height: 
+  
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #2c3e50; // Darker primary color
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+      color: #34495e; // Slightly lighter color for the subtitle
+      margin-bottom: 1.5rem;
+    }
+  
+    .form-group {
+      margin-bottom: 1.5rem;
+  
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+  
+      input {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        &:focus {
+          outline: none;
+          border-color: #007bff;
+        }
+      }
+    }
+  
+    .login-button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1.1rem;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  
+    .signup-prompt {
+      margin-top: 20px;
+      font-size: 0.9rem;
+  
+      p {
+        color: #666;
+  
+        span {
+          color: #007bff;
+          cursor: pointer;
+          font-weight: bold;
+          text-decoration: underline;
+          &:hover {
+            color: #0056b3;
+          }
+        }
+      }
+    }
+  
+    .error-message {
+      color: #ff4d4d;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+  
+    .success-message {
+      color: #28a745;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+  }
+  .snackbar-success {
+    .MuiAlert-filledSuccess {
+      background-color: #28a745; // Customize success color
+      color: #fff;
+    }
+  }
