@@ -29,6 +29,6 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 //console.log("Firebase app initialized:", app.name); // Should log "[DEFAULT]" if successfully initialized
 
-const analytics = typeof window !== "undefined" ? getAnalytics(app) : null; // Optional check for analytics in non-browser environments
+// const analytics = typeof window !== "undefined" ? getAnalytics(app) : null; // Optional check for analytics in non-browser environments
 
-export { auth, analytics , db, collection, getDocs, query, where, addDoc, Timestamp};
+export { auth , db, collection, getDocs, query, where, addDoc, Timestamp};
