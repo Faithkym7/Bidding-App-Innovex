@@ -8,10 +8,10 @@ import Select from '@mui/material/Select';
 import './SignUp.scss';
 import { motion } from 'framer-motion';
 import { cars } from '../../data/index';
-//import firestore
+//import firestore from 'firebase'
 import { doc, setDoc } from 'firebase/firestore';
 // Import the initialized auth instance
-import { auth, db } from '../../firebase'; // Adjust the path if needed
+import { auth, db } from '../../firebaseConfig'; // Adjust the path if needed
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -59,8 +59,7 @@ const Signup = () => {
             name: name,
             email: email,
             role: role,
-            phone: phone,  // Store phone number
-            specialization: role === 'lawyer' ? specialization : null,
+            phone: phone,  // Store phone number            
             createdAt: new Date() // Optional: timestamp for account creation
         });
 
@@ -69,10 +68,10 @@ const Signup = () => {
         setEmail('');
         setPassword('');
         setPhone('');
-        setSpecialization('');
+        
         
         setTimeout(() => {
-          navigate('/log-in');
+          navigate('/');
         }, 1500);
         
     } catch (err) {
@@ -198,7 +197,7 @@ const Signup = () => {
             <button type="submit" className="signup-button">Sign Up</button>
           </form>
           <div className="signup-prompt">
-            <p>Already have an account? <span onClick={() => navigate('/log-in')}>Log-In</span></p>
+            <p>Already have an account? <span onClick={() => navigate('/')}>Log-In</span></p>
           </div>
         </div>      
 
